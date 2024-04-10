@@ -1,0 +1,34 @@
+package file:
+    *It is important json file, this contains the list of dependencies which are required to execute the application
+    *it stores only the dependency details instead of folders. Bez folders consumes lot of memory when we store into git repo
+    *It is added automatically by executing "npm init -y" on the root folder.
+
+.env file:
+    *It stores all the senstivie and not sharable data/info like DB credentials, port no, API Keys, etc..
+    *We should not copy this file into PROD or git repository. Use .gitIgnore to prevent from copying into repository
+
+config folder:
+    * It contains js files which are maintaining the all configuration details like DataBase config (sername, DBname, username, etc), server related config details
+
+Node_modules:
+    This folder is big in size. generally not preferred to commit into git. bez it will be reproduced thru package.json while executing the project thru npm init -y
+
+Project Structure folders explanation:
+    *View/Front end folder - It View contains all frontend files (react, html, etc..)
+    *src folder:
+        -middleware folder: Contains Files which are related to any authentications and validations. Seperate directory kept away from controller folder, so it is improving security.
+        -models folder: Contain the details about the object which are used between Database and the controller. Example: User object- UserName, emailId, mobile, etc..
+        -routers folder: Contains files which are responsible to pass the request to controller
+        -Services folder:has Files with actual business logic used to access the database
+
+
+Deployment:
+    * Keep seperate folders for front end & back end coding. Backend code should be more secured
+
+
+
+
+Links:
+https://github.com/serbayacar/node_restapi_mvc_express_mysql/tree/master/src/application/models
+
+Use cPanel ipaddress instead of hostname to avoid access denied error

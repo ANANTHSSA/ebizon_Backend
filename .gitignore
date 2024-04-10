@@ -1,0 +1,5 @@
+copy.env
+node_modules
+ebiz.env
+.env
+ebiz_copy.env
